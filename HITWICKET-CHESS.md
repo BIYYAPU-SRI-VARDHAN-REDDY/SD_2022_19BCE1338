@@ -1,7 +1,92 @@
 <h1 align="center">Design Chess</h1>
 <h3 align="center">Let's design a system to play chess</h3>
 
+**We'll cover the following:**
+
+* [System Requirements](#system-requirements)
+* [Use Case Diagram](#use-case-diagram)
+* [Class Diagram](#class-diagram)
+* [Activity Diagram](#activity-diagram)
+* [Code](#code)
+
 Chess is a two-player strategy board game played on a chessboard, which is a checkered gameboard with 64 squares arranged in an 8×8 grid. There are a few versions of game types that people play all over the world. In this design problem, we are going to focus on designing a two-player online chess game.
+
+<p align="center">
+    <img src="/media-files/chess.png" alt="Chess">
+    <br />
+    Chess
+</p>
+
+### System Requirements
+
+We’ll focus on the following set of requirements while designing the game of chess:
+
+1. The system should support two online players to play a game of chess.
+2. All rules of international chess will be followed.
+3. Each player will be randomly assigned a side, black or white.
+4. Both players will play their moves one after the other. The white side plays the first move.
+5. Players can’t cancel or roll back their moves.
+6. The system should maintain a log of all moves by both players.
+7. Each side will start with 8 pawns, 2 rooks, 2 bishops, 2 knights, 1 queen, and 1 king.
+8. The game can finish either in a checkmate from one side, forfeit or stalemate (a draw), or resignation.
+
+### Use Case Diagram
+
+We have two actors in our system:
+
+* **Player:** A registered account in the system, who will play the game. The player will play chess moves.
+* **Admin:** To ban/modify players.
+
+Here are the top use cases for chess:
+
+* **Player moves a piece:** To make a valid move of any chess piece.
+* **Resign or forfeit a game:** A player resigns from/forfeits the game.
+* **Register new account/Cancel membership:** To add a new member or cancel an existing member.
+* **Update game log:** To add a move to the game log.
+
+Here is the use case diagram of our Chess Game:
+
+<p align="center">
+    <img src="/media-files/chess-use-case-diagram.png" alt="Chess Use Case Diagram">
+    <br />
+    Use Case Diagram for Chess
+</p>
+
+### Class Diagram
+
+Here are the main classes for chess:
+
+**Player:** Player class represents one of the participants playing the game. It keeps track of which side (black or white) the player is playing.<br />
+**Account:** We’ll have two types of accounts in the system: one will be a player, and the other will be an admin.<br />
+**Game:** This class controls the flow of a game. It keeps track of all the game moves, which player has the current turn, and the final result of the game.<br />
+**Box:** A box represents one block of the 8x8 grid and an optional piece.<br />
+**Board:** Board is an 8x8 set of boxes containing all active chess pieces.<br />
+**Piece:** The basic building block of the system, every piece will be placed on a box. This class contains the color the piece represents and the status of the piece (that is, if the piece is currently in play or not). This would be an abstract class and all game pieces will extend it.<br />
+**Move:** Represents a game move, containing the starting and ending box. The Move class will also keep track of the player who made the move, if it is a castling move, or if the move resulted in the capture of a piece.<br />
+**GameController:** Player class uses GameController to make moves.<br />
+**GameView:** Game class updates the GameView to show changes to the players.<br />
+
+<p align="center">
+    <img src="/media-files/chess-class-diagram.png" alt="Chess Class Diagram">
+    <br />
+    Class Diagram for Chess
+</p>
+
+<p align="center">
+    <img src="/media-files/chess-uml.svg" alt="Chess UML">
+    <br />
+    UML for Chess
+</p>
+
+### Activity Diagram
+
+**Make move:** Any Player can perform this activity. Here are the set of steps to make a move:
+
+<p align="center">
+    <img src="/media-files/chess-activity-diagram.svg" alt="Chess Activity Diagram">
+    <br />
+    Activity Diagram for Chess
+</p>
 
 ### Code
 
