@@ -1,4 +1,4 @@
-<h1 align="center">Design Chess</h1>
+<h1 align="center">HITWICKET-Chess Design Assignment</h1>
 <h3 align="center">Let's design a system to play chess</h3>
 
 **We'll cover the following:**
