@@ -47,7 +47,7 @@ Here are the top use cases for chess:
 Here is the use case diagram of our Chess Game:
 
 <p align="center">
-    <img src="/media-files/chess-use-case-diagram.png" alt="Chess Use Case Diagram">
+    <img src="chess-use-case-diagram.png" alt="Chess Use Case Diagram">
     <br />
     Use Case Diagram for Chess
 </p>
@@ -67,13 +67,13 @@ Here are the main classes for chess:
 **GameView:** Game class updates the GameView to show changes to the players.<br />
 
 <p align="center">
-    <img src="/media-files/chess-class-diagram.png" alt="Chess Class Diagram">
+    <img src="chess-class-diagram.png" alt="Chess Class Diagram">
     <br />
     Class Diagram for Chess
 </p>
 
 <p align="center">
-    <img src="/media-files/chess-uml.svg" alt="Chess UML">
+    <img src="chess-uml.svg" alt="Chess UML">
     <br />
     UML for Chess
 </p>
@@ -83,7 +83,7 @@ Here are the main classes for chess:
 **Make move:** Any Player can perform this activity. Here are the set of steps to make a move:
 
 <p align="center">
-    <img src="/media-files/chess-activity-diagram.svg" alt="Chess Activity Diagram">
+    <img src="chess-activity-diagram.svg" alt="Chess Activity Diagram">
     <br />
     Activity Diagram for Chess
 </p>
